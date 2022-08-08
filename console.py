@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import cmd
-
+'''
+The Cmd class provides a simple framework for writing line-oriented command interpreters
+'''
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
     def do_EOF(self, inp):
