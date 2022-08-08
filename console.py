@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 '''
-The Cmd class provides a simple framework for writing line-oriented command interpreters
+The Cmd class provides a
+framework for writing line-oriented command interpreters
 '''
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
+
     def do_EOF(self, inp):
         '''
         exiting the program at an unexpected end of file
@@ -26,7 +29,6 @@ class HBNBCommand(cmd.Cmd):
          an empty line and enter should not execute anything
         '''
         pass
-
 
 
 if __name__ == "__main__":
