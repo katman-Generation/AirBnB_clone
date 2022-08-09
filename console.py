@@ -13,7 +13,6 @@ class HBNBCommand(cmd.Cmd):
         '''
         Exit program with ctr-D
         '''
-        print()
         return True
 
     def do_quit(self, inp):
