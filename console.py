@@ -11,6 +11,7 @@ class HBNBCommand(cmd.Cmd):
 beginning of interpreter
     '''
     prompt = "(hbnb) "
+    classes = {"BaseModel", "State", "City","Amenity", "Place", "Review", "User"}
 
     def do_EOF(self, inp):
         '''
