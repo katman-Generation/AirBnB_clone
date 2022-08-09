@@ -7,24 +7,27 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    prompt = "(hbnb)"
+    '''
+beginning of interpreter
+    '''
+    prompt = "(hbnb) "
 
     def do_EOF(self, inp):
         '''
-        Exit program with ctr-D
+    Exit program with ctr-D
         '''
         print()
         return True
 
     def do_quit(self, inp):
         '''
-        Exit program with quit
+    Exit program with quit
         '''
         return True
 
     def emptyline(self):
         '''
-        Emptyline + enter should execute nothing
+    Emptyline + enter should execute nothing
         '''
         pass
 

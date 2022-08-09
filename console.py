@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''
 The Cmd class provides a
 framework for writing line-oriented command interpreters
@@ -10,15 +11,14 @@ class HBNBCommand(cmd.Cmd):
     This class is the entry point to the command interpreter
     """
     prompt = "(hbnb) "
-
-   def do_EOF(self, line):
-       """
+    def do_EOF(self, line):
+        """
         Exit the program on keyboard shortcut Ctr-D
         :param line:
         :return:
         """
-       print()
-       return True
+        print()
+        return True
 
     def do_quit(self, line):
         """
@@ -35,7 +35,6 @@ class HBNBCommand(cmd.Cmd):
         :return:
         """
         pass
-
 
 
 if __name__ == "__main__":
