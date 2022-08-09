@@ -11,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = '(hbnb) '
     
-     def do_EOF(self, args):
+    def do_EOF(self, args):
         """
             EOF command exits out of the command interpreter
         """
@@ -24,7 +24,6 @@ class HBNBCommand(cmd.Cmd):
         """
         return True
 
-    def emptyline(self):
         """
             EOF command exits out of the command interpreter
         """
