@@ -11,22 +11,20 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, inp):
         '''
-        exiting the program at an unexpected end of file
+        Exit program with ctr-D
         '''
         print()
         return True
 
     def do_quit(self, inp):
         '''
-        Quit command to exit the program
-        :parameter line:
-        :return:
+        Exit program with quit
         '''
         return True
 
     def emptyline(self):
         '''
-         an empty line and enter should not execute anything
+        Emptyline + enter should execute nothing
         '''
         pass
 
