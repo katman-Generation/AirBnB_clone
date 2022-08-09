@@ -13,12 +13,6 @@ class HBNBCommand(cmd.Cmd):
     my_classes = ["BaseModel", "User", "Place", "State", "Amenity", "Review",
                                                                     "City"]
 
-    def do_help(self, args):
-        """
-            defines help options
-        """
-        cmd.Cmd.do_help(self, args)
-
     def do_quit(self, args):
         """
             Quit command to exit the program
@@ -35,3 +29,6 @@ class HBNBCommand(cmd.Cmd):
             avoid any execution when enter is hit in empty line
         """
         pass 
+
+if __name__ == '__main__':
+        HBNBCommand().cmdloop()
