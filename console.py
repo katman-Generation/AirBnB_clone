@@ -10,8 +10,13 @@ class HBNBCommand(cmd.Cmd):
     """
 
     prompt = '(hbnb) '
-    my_classes = ["BaseModel", "User", "Place", "State", "Amenity", "Review",
-                                                                    "City"]
+    
+     def do_EOF(self, args):
+        """
+            EOF command exits out of the command interpreter
+        """
+        print()
+        return True
 
     def do_quit(self, args):
         """
@@ -19,16 +24,13 @@ class HBNBCommand(cmd.Cmd):
         """
         return True
 
-    def do_EOF(self, args):
+    def emptyline(self):
         """
             EOF command exits out of the command interpreter
         """
         print()
         return True
-        """
-            avoid any execution when enter is hit in empty line
-        """
-        pass 
+        
 
 if __name__ == '__main__':
         HBNBCommand().cmdloop()
