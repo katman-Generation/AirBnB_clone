@@ -1,37 +1,37 @@
 #!/usr/bin/python3
-'''
-The Cmd class provides a
-framework for writing line-oriented command interpreters
-'''
+"""
+    contains the entry point of the command interpreter:
+"""
 import cmd
 
-
 class HBNBCommand(cmd.Cmd):
-    '''
-beginning of interpreter
-    '''
-    prompt = "(hbnb) "
-    classes = {"BaseModel", "State", "City","Amenity", "Place", "Review", "User"}
+    """
+        command interprete
+    """
 
-    def do_EOF(self, inp):
-        '''
-    Exit program with ctr-D
-        '''
+    prompt = '(hbnb) '
+    my_classes = ["BaseModel", "User", "Place", "State", "Amenity", "Review",
+                                                                    "City"]
+
+    def do_help(self, args):
+        """
+            defines help options
+        """
+        cmd.Cmd.do_help(self, args)
+
+    def do_quit(self, args):
+        """
+            Quit command to exit the program
+        """
+        return True
+
+    def do_EOF(self, args):
+        """
+            EOF command exits out of the command interpreter
+        """
         print()
         return True
-
-    def do_quit(self, inp):
-        '''
-    Exit program with quit
-        '''
-        return True
-
-    def emptyline(self):
-        '''
-    Emptyline + enter should execute nothing
-        '''
-        pass
-
-
-if __name__ == '__main__':
-    HBNBCommand().cmdloop()
+        """
+            avoid any execution when enter is hit in empty line
+        """
+        pass 
