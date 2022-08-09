@@ -7,35 +7,30 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """
-    This class is the entry point to the command interpreter
-    """
+    '''
+beginning of interpreter
+    '''
     prompt = "(hbnb) "
-    def do_EOF(self, line):
-        """
-        Exit the program on keyboard shortcut Ctr-D
-        :param line:
-        :return:
-        """
+
+    def do_EOF(self, inp):
+        '''
+    Exit program with ctr-D
+        '''
         print()
         return True
 
-    def do_quit(self, line):
-        """
-        Exit the program when you type keyword quit
-        :param line:
-        :return:
-        """
+    def do_quit(self, inp):
+        '''
+    Exit program with quit
+        '''
         return True
 
     def emptyline(self):
-        """
-        An requested, an empty line + ENTER shouldnt execute anything.
-        So it will overwrite default behaviour to repeat the most recent command
-        :return:
-        """
+        '''
+    Emptyline + enter should execute nothing
+        '''
         pass
 
 
-if __name__ == "__main__":
-    HBNBCommand().cmdloop()
+if __name__ == '__main__':
+        HBNBCommand().cmdloop()
