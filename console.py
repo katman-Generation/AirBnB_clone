@@ -28,9 +28,7 @@ class HBNBCommand(cmd.Cmd):
         """
             EOF command exits out of the command interpreter
         """
-        print()
-        return True
-        
+        pass
 
 if __name__ == '__main__':
         HBNBCommand().cmdloop()
