@@ -23,9 +23,10 @@ class HBNBCommand(cmd.Cmd):
             Quit command to exit the program
         """
         return True
-
+    
+    def emptyline(self):
         """
-            EOF command exits out of the command interpreter
+           command exits out of the command interpreter
         """
         pass
 
